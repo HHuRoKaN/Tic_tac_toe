@@ -1,4 +1,4 @@
-/venv
+/.venv
 /.mypy_cache
 /__pycache__
 /gameparts/__pycache__
