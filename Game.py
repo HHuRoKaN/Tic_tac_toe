@@ -57,8 +57,8 @@ def main():
 
 
 def save_result(text):
-    file = open('results.txt', 'a')
-    file.write(text + '\n')
+    with open('results.txt', 'a') as file:
+        file.write(text + '\n')
 
 
 if __name__ == '__main__':
