@@ -1,9 +1,11 @@
 class Board:
     """Класс, описывающий игровое поле."""
-    field_size = 3
+    fieldsize = 3
 
     def __init__(self):
-        self.board = [[' ' for _ in range(self.field_size)] for _ in range(self.field_size)]
+        self.board = [
+            [' ' for _ in range(self.fieldsize)] for _ in range(self.fieldsize)
+            ]
 
     # Метод, который обрабатывает ходы игроков.
     def make_move(self, row, col, player):
@@ -16,8 +18,8 @@ class Board:
             print('-' * 5)
 
     def is_board_full(self):
-        for i in range(self.field_size):
-            for j in range(self.field_size):
+        for i in range(self.fieldsize):
+            for j in range(self.fieldsize):
                 if self.board[i][j] == ' ':
                     return False
         return True
@@ -36,4 +38,5 @@ class Board:
         return False
 
     def __str__(self):
-        return f'Объект игрового поля размером {self.field_size}x{self.field_size}.'
+        return ('Объект игрового поля размером'
+                f'{self.fieldsize}x{self.fieldsize}.')
