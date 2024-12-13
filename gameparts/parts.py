@@ -1,5 +1,5 @@
 class Board:
-    """Класс, описывающий игровое поле."""
+    """Класс, регулирующий игровой процесс."""
     fieldsize = 3
 
     def __init__(self):
@@ -7,15 +7,8 @@ class Board:
             [' ' for _ in range(self.fieldsize)] for _ in range(self.fieldsize)
             ]
 
-    # Метод, который обрабатывает ходы игроков.
     def make_move(self, row, col, player):
         self.board[row][col] = player
-
-    # Метод, который отрисовывает игровое поле.
-    def display(self):
-        for row in self.board:
-            print('|'.join(row))
-            print('-' * 5)
 
     def is_board_full(self):
         for i in range(self.fieldsize):
